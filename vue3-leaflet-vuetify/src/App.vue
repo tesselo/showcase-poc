@@ -1,6 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <v-row class="justify-center py-6">
+      <v-img 
+        src="./assets/logo.png"
+        :max-width="logoSize ? 130 : 150"
+      ></v-img>
+  </v-row>
+  
   <HelloTessera :msg="helloMsg" :subMsg="subHelloMsg"/>
+ 
+  <v-row class="justify-center py-10">
+    <v-btn
+      depressed
+      color="error"
+      @Click="toggleLogoSize"     
+    >Click Me</v-btn>
+  </v-row>
 </template>
 
 <script lang="ts">
@@ -15,7 +29,13 @@ export default defineComponent({
   data() {
     return {
       helloMsg: 'Hello Tesseras!',
-      subHelloMsg: 'This is the first Tesselo Showcase POC.'
+      subHelloMsg: 'This is the first Tesselo Showcase POC.',
+      logoSize: true
+    }
+  },
+  methods: {
+    toggleLogoSize() {
+      this.logoSize = !this.logoSize
     }
   }
 });
@@ -29,6 +49,10 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+html {
+  overflow-y: auto !important;
 }
 
 body {
