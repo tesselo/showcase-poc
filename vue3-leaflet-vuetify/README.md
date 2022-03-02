@@ -26,6 +26,12 @@ npm run lint
 ```
 ```
 ## Vuetify Docs
-* https://vuetifyjs.com/en/introduction/roadmap/#v30-titan
 
+# Vuetify Alpha Version for Vue 3
+* https://next.vuetifyjs.com/en
+
+# Features-guides plugins (vuetify.ts)
 * https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
+
+# Vuetify components importation (vue.config.js)
+* https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
