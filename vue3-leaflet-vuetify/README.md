@@ -1,37 +1,38 @@
-# vue3-leaflet-vuetify
+# Vue 3 & Leaflet & Vuetify UI
+## _Showcase POC - #1_
+&nbsp;
 
-## Project setup
+## Project Setup
+
 ``` bash
 # Install dependencies
 npm install
 
 # Compiles and hot-reloads for development
-```
 npm run serve
-```
 
 # Compiles and minifies for production
-```
 npm run build
-```
 
 # Run your unit tests
-```
 npm run test:unit
-```
 
 # Lints and fixes files
-```
 npm run lint
 ```
-```
-## Vuetify Docs
+&nbsp;
+## Vuetify Documentation
 
-# Vuetify Alpha Version for Vue 3
-* https://next.vuetifyjs.com/en
 
-# Features-guides plugins (vuetify.ts)
-* https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
+| Context | Link |
+| ------ | ------ |
+| Vuetify Alpha version for Vue 3 | [https://next.vuetifyjs.com/en][VuetN] |
+| Features-guides plugins (vuetify.ts) | [https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides][VuetFG] |
+| Vuetify components importation (vue.config.js) | [https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader][VuetCI] |
 
-# Vuetify components importation (vue.config.js)
-* https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+   [VuetN]: <https://next.vuetifyjs.com/en>
+   [VuetFG]: <https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides>
+   [VuetCI]: <https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader>
