@@ -1,64 +1,41 @@
 <template>
-  <v-row class="justify-center py-6">
-      <v-img 
-        src="./assets/logo.png"
-        :max-width="logoSize ? 130 : 150"
-      ></v-img>
-  </v-row>
-  
-  <HelloTessera :msg="helloMsg" :subMsg="subHelloMsg"/>
- 
-  <v-row class="justify-center py-10">
-    <v-btn
-      depressed
-      color="error"
-      @Click="toggleLogoSize"     
-    >Click Me</v-btn>
-  </v-row>
+  <v-app>
+      <TslToolbar />
+      <HelloTessera :msg="helloMsg" :subMsg="helloSubMsg"/>
+  </v-app>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloTessera from './components/HelloTessera.vue';
+import { defineComponent } from 'vue'
+import HelloTessera from './components/Hello-Tessera.vue'
+import TslToolbar from './components/Tsl-Toolbar.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloTessera
+    HelloTessera,
+    TslToolbar,
   },
   data() {
     return {
       helloMsg: 'Hello Tesseras!',
-      subHelloMsg: 'This is the first Tesselo Showcase POC.',
-      logoSize: true
-    }
-  },
-  methods: {
-    toggleLogoSize() {
-      this.logoSize = !this.logoSize
+      helloSubMsg: 'This is the most simple UI mockup with vuetify for Tesselo Showcase POC.',
     }
   }
 });
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 html {
   overflow-y: auto !important;
 }
 
-body {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 </style>
