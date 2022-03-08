@@ -3,24 +3,28 @@
     dark
     dense
     elevation="2"
-    height="40" >
-    <v-toolbar-items>
+    height="40">
+    <v-row>
+      <v-col> 
         <v-img 
+          width="120"
           src="../assets/logo.png"
         ></v-img>
-    </v-toolbar-items>
+      </v-col>
+    </v-row>
     <v-spacer></v-spacer>
-    <v-col>
-      <v-container
-        class="toolbar-switch-btn"
-        fluid >
+    <v-row>
+      <v-col>
         <v-switch
-          x-small
+          class="float-right"
           v-model="switchLayer"
-          :label="`${switchLayer ? 'RBG' : 'NDVI'}`"
+          hide-details
+          x-small
+          color="success"
+          :label="`${switchLayer ? 'RGB' : 'NDVI'}`"
         ></v-switch>
-      </v-container>
-    </v-col>
+      </v-col>
+    </v-row>
   </v-toolbar>
 </template>
 
