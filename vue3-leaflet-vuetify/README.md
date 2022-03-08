@@ -1,5 +1,11 @@
 # Vue 3 & Leaflet & Vuetify UI
 ## _Showcase POC - #1_
+``` bash
+Vue: v3.2.13
+Vuetify: v3.0.0-alpha.0
+Typescript: v4.5.5
+```
+
 &nbsp;
 
 ## Project Setup
