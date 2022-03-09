@@ -1,0 +1,14 @@
+.heading {
+    display: flex;
+    flex-direction: column;
+    font-size: 55px;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  .text {
+    font-weight: 400;
+    padding-top: 20px;
+    font-size: 35px;
+  }
