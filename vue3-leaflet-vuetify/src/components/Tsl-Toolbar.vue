@@ -1,44 +1,45 @@
 <template>
-  <v-toolbar 
-    dark
-    dense
-    elevation="2"
-    height="40">
-    <v-row>
-      <v-col> 
-        <v-img 
-          width="120"
-          src="../assets/logo.png"
-        ></v-img>
-      </v-col>
-    </v-row>
-    <v-spacer></v-spacer>
-    <v-row>
-      <v-col>
-        <v-switch
-          class="float-right"
-          v-model="switchLayer"
-          hide-details
-          x-small
-          color="success"
-          :label="`${switchLayer ? 'RGB' : 'NDVI'}`"
-        ></v-switch>
-      </v-col>
-    </v-row>
-  </v-toolbar>
+  <div data-testid="toolbar-test">
+    <v-toolbar 
+      dark
+      dense
+      elevation="2"
+      height="40">
+      <v-row>
+        <v-col> 
+          <v-img 
+            width="120"
+            src="../assets/logo.png"
+          ></v-img>
+        </v-col>
+      </v-row>
+      <v-spacer></v-spacer>
+      <v-row>
+        <v-col>
+          <v-switch
+            class="float-right"
+            v-model="switchLayer"
+            hide-details
+            color="success"
+            label="NDVI"
+            @change="$emit('updateMapType', switchLayer)"
+          ></v-switch>
+        </v-col>
+      </v-row>
+    </v-toolbar>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'tsl-Toolbar',
+  name: 'TslToolbar',
   data() {
     return {
-      switchLayer: true,
+      switchLayer: false,
     }
-  },
-  
+  }
 });
 </script>
 
