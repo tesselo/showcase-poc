@@ -1,26 +1,32 @@
 <template>
   <v-app>
-      <TslToolbar />
-      <HelloTessera :msg="helloMsg" :subMsg="helloSubMsg"/>
+    <TslToolbar @update-map-type="updateMapType" />
+    <TslMap :mapType="mapType" />
   </v-app>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloTessera from './components/Hello-Tessera.vue'
-import TslToolbar from './components/Tsl-Toolbar.vue'
+import { defineComponent, ref } from "vue";
+import TslMap from "./components/tsl-map/Tsl-Map.vue";
+import TslToolbar from "./components/Tsl-Toolbar.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
-    HelloTessera,
     TslToolbar,
+    TslMap,
   },
-  data() {
+  setup() {
+    let mapType = ref('RBG')
+    
+    const updateMapType = (value: boolean) => {
+      mapType.value = value ? "NDVI" : "RGB"
+    };
+
     return {
-      helloMsg: 'Hello Tesseras!',
-      helloSubMsg: 'This is the most simple UI mockup with vuetify for Tesselo Showcase POC.',
-    }
+      updateMapType,
+      mapType,
+    };
   }
 });
 </script>
@@ -37,5 +43,4 @@ export default defineComponent({
 html {
   overflow-y: auto !important;
 }
-
 </style>
