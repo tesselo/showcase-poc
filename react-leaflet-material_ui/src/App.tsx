@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
-import Logo from './components/Logo/Logo'
-
-import HelloTessera from './components/Tessera/HelloTessera'
+import Toolbar from './components/Toolbar/Toolbar'
+import Map from './components/Map/Map'
 
 const App: React.FC = () => {
+  const [mapType, setMapType] = useState('RGB')
+
+  const getMapType: Function = (isNdvi: any) => {
+    setMapType(isNdvi.target.checked ? 'NDVI' : 'RGB')
+  }
+
   return (
-    <div className='App'>
-        <Logo />
-        <HelloTessera />
+    <div className='App' data-testid='map-test'>
+      <Toolbar mapTypeSelected={getMapType}/>
+      <Map mapType={mapType}/>
     </div>
   )
 }
