@@ -6,7 +6,7 @@ import Toolbar from '../components/Toolbar/Toolbar'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.App}>
+    <div className='app'>
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0"></meta>
         <link rel="icon" href="/favicon.png"></link>
