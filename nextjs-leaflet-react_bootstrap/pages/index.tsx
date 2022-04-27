@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Logo from '../components/Logo/Logo'
+import Toolbar from '../components/Toolbar/Toolbar'
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
         <title>Tesselo - Showcase POC</title>
       </Head>
       
+      <Toolbar />
       <Logo className='pb-5' alt='tesselo-logo' width='200' height='80'/>
       <HelloTessera />
     </div>
