@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Logo from '../components/Logo/Logo'
+import HelloTessera from '../components/HelloTessera/HelloTessera'
 import Toolbar from '../components/Toolbar/Toolbar'
 
 const Home: NextPage = () => {
