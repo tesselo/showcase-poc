@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import HelloTessera from '../components/HelloTessera'
+import HelloTessera from './HelloTessera'
 
 describe('Component Test: index.tsx ', () => {
     test('Validate screen text', () => {
