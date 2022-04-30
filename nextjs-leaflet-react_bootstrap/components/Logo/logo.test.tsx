@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Logo from './Logo'
 
-describe('Home', () => {
+describe('Component Test: Logo.tsx ', () => {
 
   it('Validate toolbar logo renderization', () => {
     render(<Logo alt='tesselo-logo' width='120' height='40'/>)
