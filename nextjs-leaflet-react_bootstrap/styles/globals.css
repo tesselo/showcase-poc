@@ -21,3 +21,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.leaflet-control-container .leaflet-top {
+  top: 50px;
+}
+.leaflet-control-container .leaflet-top .leaflet-control-zoom.leaflet-bar.leaflet-control a {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 18px;
+}
