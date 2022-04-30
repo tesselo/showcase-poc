@@ -18,6 +18,7 @@ const Home: NextPage = () => {
         <title>Tesselo - Showcase POC</title>
       </Head>
       
+      <Toolbar mapTypeSelected={getMapType} />
       <Map mapType={mapType}/>
     </div>
   )
