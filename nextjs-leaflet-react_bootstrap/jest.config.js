@@ -1,16 +1,21 @@
 // jest.config.js
 module.exports = {
   collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
+    '**/*.tsx',
+    //'!**/*.d.ts',
+    //'!**/node_modules/**',
   ],
+  coveragePathIgnorePatterns: [
+    "<rootDir>/pages/_app.tsx",
+    "<rootDir>/.next",
+    "<rootDir>/coverage",
+  ],  
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules) - See README file for more information.
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
 
     // Handle CSS imports (without CSS modules)
-    '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
+    '^.+\\.(css|sass|scss)$': 'identity-obj-proxy',
 
     // Handle image imports - See README file for more information.
     '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.js`,
