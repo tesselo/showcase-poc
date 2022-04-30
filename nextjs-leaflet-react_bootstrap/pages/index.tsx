@@ -1,10 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Logo from '../components/Logo/Logo'
-import HelloTessera from '../components/HelloTessera/HelloTessera'
+import { useState } from 'react'
 import Toolbar from '../components/Toolbar/Toolbar'
+import Map from '../components/Map'
 
 const Home: NextPage = () => {
+  const [mapType, setMapType] = useState('RGB')
+  const getMapType: Function = (isNdvi: any) => {
+    setMapType(isNdvi.target.checked ? 'NDVI' : 'RGB')
+  }
+
   return (
     <div className='app'>
       <Head>
@@ -13,9 +18,7 @@ const Home: NextPage = () => {
         <title>Tesselo - Showcase POC</title>
       </Head>
       
-      <Toolbar />
-      <Logo className='pb-5' alt='tesselo-logo' width='200' height='80'/>
-      <HelloTessera />
+      <Map mapType={mapType}/>
     </div>
   )
 }
