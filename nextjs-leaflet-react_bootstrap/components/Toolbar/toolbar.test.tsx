@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Toolbar from './Toolbar'
 
-describe('Home', () => {
+describe('Component Test: Toolbar.tsx ', () => {
 
-  it('Validate search button text', () => {
+  it('Validate toggle switch button text', () => {
     render(<Toolbar />)
 
-    const validateButtonText = screen.getByText('Search')
+    const validateButtonText = screen.getByText('NDVI')
     
     expect(validateButtonText).toBeInTheDocument();
   })
